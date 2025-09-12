@@ -1,0 +1,24 @@
+{
+  "$schema": "https://nitro.margelo.com/nitro.schema.json",
+  "cxxNamespace": [
+    "nitrobaidugeolocation"
+  ],
+  "ios": {
+    "iosModuleName": "NitroBaiduGeolocation"
+  },
+  "android": {
+    "androidNamespace": [
+      "nitrobaidugeolocation"
+    ],
+    "androidCxxLibName": "NitroBaiduGeolocation"
+  },
+  "autolinking": {
+    "NitroBaiduGeolocation": {
+      "swift": "HybridNitroBaiduGeolocation",
+      "kotlin": "HybridNitroBaiduGeolocation"
+    }
+  },
+  "ignorePaths": [
+    "**/node_modules"
+  ]
+}
