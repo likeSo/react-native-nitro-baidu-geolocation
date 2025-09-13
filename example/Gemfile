@@ -14,3 +14,6 @@ gem 'bigdecimal'
 gem 'logger'
 gem 'benchmark'
 gem 'mutex_m'
+
+# Lock drb version to be compatible with Ruby 2.6
+gem 'drb', '~> 2.0.5'
