@@ -113,6 +113,7 @@ android {
 
   sourceSets {
     main {
+      jniLibs.srcDirs = ['libs']
       if (isNewArchitectureEnabled()) {
         java.srcDirs += [
           // React Codegen files
