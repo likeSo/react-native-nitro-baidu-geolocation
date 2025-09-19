@@ -14,7 +14,7 @@ react-native-nitro-baidu-geolocation 是一款基于Nitro的百度定位插件�
 ## 安装
 
 ```sh
-npm install react-native-nitro-baidu-geolocation
+npm install react-native-nitro-baidu-geolocation react-native-nitro-modules
 ```
 
 ## 配置
