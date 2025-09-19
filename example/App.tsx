@@ -1,13 +1,21 @@
-import React from 'react';
-import {Text, View, StyleSheet } from 'react-native';
+import React, { useCallback, useEffect } from 'react';
+import { Text, View, StyleSheet, Button } from 'react-native';
 import { NitroBaiduGeolocation } from 'react-native-nitro-baidu-geolocation';
 
 function App(): React.JSX.Element {
+  useEffect(() => {
+    NitroBaiduGeolocation.agreePrivacyPolicy(true);
+  }, []);
+
+  const onInit = useCallback(async() => {
+    const result = await NitroBaiduGeolocation.initialize('ak')
+    console.log(result)
+  }, [])
+  
+
   return (
     <View style={styles.container}>
-        <Text style={styles.text}>
-        {NitroBaiduGeolocation.sum(1, 2)}
-        </Text>
+      <Button title='初始化' onPress={onInit} />
     </View>
   );
 }
@@ -19,8 +27,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
-        fontSize: 40, 
-        color: 'green'
-    }});
+    fontSize: 40,
+    color: 'green',
+  },
+});
 
 export default App;

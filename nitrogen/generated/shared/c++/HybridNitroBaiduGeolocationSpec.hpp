@@ -54,7 +54,6 @@ namespace margelo::nitro::nitrobaidugeolocation {
 
     public:
       // Methods
-      virtual double sum(double num1, double num2) = 0;
       virtual void agreePrivacyPolicy(bool agree) = 0;
       virtual std::shared_ptr<Promise<double>> initialize(const std::string& ak) = 0;
       virtual std::shared_ptr<Promise<Location>> getCurrentLocation(const GetLocationOptions& options) = 0;

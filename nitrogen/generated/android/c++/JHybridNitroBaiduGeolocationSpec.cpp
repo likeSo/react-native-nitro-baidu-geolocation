@@ -68,11 +68,6 @@ namespace margelo::nitro::nitrobaidugeolocation {
   
 
   // Methods
-  double JHybridNitroBaiduGeolocationSpec::sum(double num1, double num2) {
-    static const auto method = javaClassStatic()->getMethod<double(double /* num1 */, double /* num2 */)>("sum");
-    auto __result = method(_javaPart, num1, num2);
-    return __result;
-  }
   void JHybridNitroBaiduGeolocationSpec::agreePrivacyPolicy(bool agree) {
     static const auto method = javaClassStatic()->getMethod<void(jboolean /* agree */)>("agreePrivacyPolicy");
     method(_javaPart, agree);

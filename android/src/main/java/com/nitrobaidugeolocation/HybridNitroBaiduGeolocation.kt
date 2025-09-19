@@ -17,10 +17,6 @@ import com.margelo.nitro.nitrobaidugeolocation.Location
 class HybridNitroBaiduGeolocation : HybridNitroBaiduGeolocationSpec() {
     private var mLocationClient: LocationClient? = null
 
-    override fun sum(num1: Double, num2: Double): Double {
-        return num1 + num2
-    }
-
     override fun agreePrivacyPolicy(agree: Boolean) {
         LocationClient.setAgreePrivacy(agree)
     }

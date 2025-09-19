@@ -3,7 +3,6 @@ import type { GetLocationOptions, Location } from '../NitroBaiduGeolocation.type
 
 export interface NitroBaiduGeolocation
   extends HybridObject<{ android: 'kotlin'; ios: 'swift' }> {
-  sum(num1: number, num2: number): number
 
   /**
    * 在用户接受了app隐私政策后调用此方法，否则SDK不能正确使用。

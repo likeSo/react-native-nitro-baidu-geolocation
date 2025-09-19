@@ -80,14 +80,6 @@ namespace margelo::nitro::nitrobaidugeolocation {
 
   public:
     // Methods
-    inline double sum(double num1, double num2) override {
-      auto __result = _swiftPart.sum(std::forward<decltype(num1)>(num1), std::forward<decltype(num2)>(num2));
-      if (__result.hasError()) [[unlikely]] {
-        std::rethrow_exception(__result.error());
-      }
-      auto __value = std::move(__result.value());
-      return __value;
-    }
     inline void agreePrivacyPolicy(bool agree) override {
       auto __result = _swiftPart.agreePrivacyPolicy(std::forward<decltype(agree)>(agree));
       if (__result.hasError()) [[unlikely]] {

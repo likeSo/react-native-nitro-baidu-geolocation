@@ -14,7 +14,6 @@ public protocol HybridNitroBaiduGeolocationSpec_protocol: HybridObject {
   
 
   // Methods
-  func sum(num1: Double, num2: Double) throws -> Double
   func agreePrivacyPolicy(agree: Bool) throws -> Void
   func initialize(ak: String) throws -> Promise<Double>
   func getCurrentLocation(options: GetLocationOptions) throws -> Promise<Location>

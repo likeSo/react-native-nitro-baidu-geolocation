@@ -14,7 +14,6 @@ namespace margelo::nitro::nitrobaidugeolocation {
     HybridObject::loadHybridMethods();
     // load custom methods/properties
     registerHybrids(this, [](Prototype& prototype) {
-      prototype.registerHybridMethod("sum", &HybridNitroBaiduGeolocationSpec::sum);
       prototype.registerHybridMethod("agreePrivacyPolicy", &HybridNitroBaiduGeolocationSpec::agreePrivacyPolicy);
       prototype.registerHybridMethod("initialize", &HybridNitroBaiduGeolocationSpec::initialize);
       prototype.registerHybridMethod("getCurrentLocation", &HybridNitroBaiduGeolocationSpec::getCurrentLocation);

@@ -8,22 +8,48 @@ react-native-nitro-baidu-geolocation 是一款基于Nitro的百度定位插件�
 
 ## Requirements
 
-- React Native v0.76.0 or higher
-- Node 18.0.0 or higher
+- React Native v0.76.0+
+- Node 18.0.0+
 
-> [!IMPORTANT]  
-> To Support `Nitro Views` you need to install React Native version v0.78.0 or higher.
+## 安装
 
-## Installation
-
-```bash
-bun add react-native-nitro-baidu-geolocation react-native-nitro-modules
+```sh
+npm install react-native-nitro-baidu-geolocation
 ```
 
-## Credits
+## 配置
 
-Bootstrapped with [create-nitro-module](https://github.com/patrickkabwe/create-nitro-module).
+在安卓清单的`application`节点下，添加`meta-data`字段，存放百度的授权AK：
 
-## Contributing
+```xml
+<meta-data
+    android:name="com.baidu.lbsapi.API_KEY"
+    android:value="内容替换为你的AK" >
+</meta-data>
+```
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## 使用
+
+```typescript
+import { NitroBaiduGeolocation } from 'react-native-nitro-baidu-geolocation';
+
+/// 接受隐私协议。国内市场中，在用户接受隐私协议的时候调用该方法。务必在初始化之前调用，否则不会生效。
+NitroBaiduGeolocation。agreePrivacyPolicy(true)
+
+/// 初始化SDK，初始化定位插件实例
+await NitroBaiduGeolocation.initialize(ak)
+
+/// 拿到当前定位，一次定位
+await NitroBaiduGeolocation.getCurrentLocation({})
+```
+
+
+## 待办事项
+
+- [ ] 持续定位
+
+
+## 联系我
+
+请进QQ群交流：682911244
+

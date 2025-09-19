@@ -42,10 +42,6 @@ abstract class HybridNitroBaiduGeolocationSpec: HybridObject() {
   // Methods
   @DoNotStrip
   @Keep
-  abstract fun sum(num1: Double, num2: Double): Double
-  
-  @DoNotStrip
-  @Keep
   abstract fun agreePrivacyPolicy(agree: Boolean): Unit
   
   @DoNotStrip
