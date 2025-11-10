@@ -34,7 +34,7 @@ npm install react-native-nitro-baidu-geolocation react-native-nitro-modules
 import { NitroBaiduGeolocation } from 'react-native-nitro-baidu-geolocation';
 
 /// 接受隐私协议。国内市场中，在用户接受隐私协议的时候调用该方法。务必在初始化之前调用，否则不会生效。
-NitroBaiduGeolocation。agreePrivacyPolicy(true)
+NitroBaiduGeolocation.agreePrivacyPolicy(true)
 
 /// 初始化SDK，初始化定位插件实例
 await NitroBaiduGeolocation.initialize(ak)
